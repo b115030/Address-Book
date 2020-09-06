@@ -1,9 +1,5 @@
-import java.util.*;
-//import java.util.ArrayList;
-//import java.util.Collections;
-//import java.util.Comparator;
-//import java.util.List;
 
+import java.util.*;
 
 class AddressBook {
 	
@@ -24,24 +20,45 @@ class AddressBook {
 		
 		 return Personname;
 	}
+	 public void setName(String name) {
+		 this.Personname=name;
+	 }
 	String getHN() {
 		return PersonhouseNumber;
 	}
+	public void setHN(String houseNo) {
+		 this.PersonhouseNumber=houseNo;
+	 }
 	String getCity() {
 		return Personcity;
 	}
+	public void setCity(String city) {
+		 this.Personcity=city;
+	 }
 	String getState() {
 		return Personstate;
 	}
+	public void setState(String state) {
+		 this.Personstate=state;
+	 }
 	long getZip() {
 		return Personzipcode;
 	}
+	public void setZip(long zip) {
+		 this.Personzipcode=zip;
+	 }
 	String getCountry() {
 		return Personcountry;
 	}
+	public void setCountry(String country) {
+		 this.Personcountry=country;
+	 }
 	String getUniqId() {
 		return PersonuniqId;
 	}
+	public void setUniqID(String uniq) {
+		 
+	 }
 	
 
 	public static void main(String[] args) {
@@ -88,10 +105,38 @@ class AddressBook {
 		
 			addrBook.add(new AddressBook(name,houseNumber,city,state,zipcode,country,uniId)); 
 				break;
-		/*case 2: 
+		case 2: System.out.println("Give the index of Person to edit."); 
+				int a=readIn.nextInt();
+				System.out.println("Choose to edit \n1. Name \n2. House Number \n3. city \n4. state \n5. zipcode \n6. country"); 
+				switch(readIn.nextInt()) {
+					case 1: System.out.println("Enter the Name of the Person");
+					String new_name=readIn.next();
+					addrBook.get(a).setName(new_name);
+					
+					System.out.println("Enter the House Number");
+					String new_houseNumber=readIn.next();
+					addrBook.get(a).setHN(new_houseNumber);
+				
+					System.out.println("Enter the Nameo of the City");
+					String new_city=readIn.next();
+					addrBook.get(a).setCity(new_city);
+				
+					System.out.println("Enter the State");
+					String new_state=readIn.next();
+					addrBook.get(a).setState(new_state);
+				
+					System.out.println("Enter the ZIP code");
+					long new_zipcode=readIn.nextLong();
+					addrBook.get(a).setZip(new_zipcode);
+				
+					System.out.println("enter the  country ");
+					String new_country=readIn.next();
+					addrBook.get(a).setCountry(new_country);
+				}
 				break;
-		case 3: 
-				break;*/
+		case 3: System.out.println("Give the index of Person to edit."); 
+				int b=readIn.nextInt();
+				addrBook.remove(b);
 		case 4: System.out.println("What do you want to do. Choose an Option: \n1. Sort by Last Name \n2. Sort by Zip Code");
 				int ch=readIn.nextInt();
 				switch(ch) {
@@ -104,7 +149,7 @@ class AddressBook {
 				default: System.out.println("Invalid");
 						}
 				break;
-		case 5: addrBook.forEach(Ab->{System.out.println("Name: " + Ab.getName() +" House Number: "+Ab.getHN()+" City: "+Ab.getCity()+" State: "+Ab.getState()+" Zip Code: "+Ab.getZip()+" Country: "+Ab.getCountry());});
+		case 5: addrBook.forEach(Ab->{System.out.println(" Name: " + Ab.getName() +" House Number: "+Ab.getHN()+" City: "+Ab.getCity()+" State: "+Ab.getState()+" Zip Code: "+Ab.getZip()+" Country: "+Ab.getCountry());});
 				break;
 		case 6: flag=false;
 				break;
